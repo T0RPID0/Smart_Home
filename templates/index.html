@@ -1,0 +1,99 @@
+{% extends "layout.html" %}
+{% block head %}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+{% endblock %}
+{% block content %}
+<div class="container-fluid p-5" id="index">
+    <div class="row" id="row1">
+        <div class="col-sm-6">
+            <h2 style="font-weight:lighter;font-size: 36px;">Devices</h2>
+        </div>
+        <div class="col-sm-6">
+            <h2 style="font-weight:lighter;font-size: 36px;">Cameras</h2>
+        </div>
+    </div>
+    <br>
+    <div class="row" id="row2">
+        <div class="col-sm-6">
+            <div id="node0" class="nodes">
+                <label class="switch" style="margin:5px; padding: 5px;">
+                    <h5 style="font-weight: lighter;font-size: 22px;">Node 0</h5>
+                </label>
+                &emsp13;
+                <label class="switch">
+                    <input id="D0" type="checkbox" onclick="check_input(this)">
+                    <div class="slider"></div>
+                </label>
+                &emsp13;
+                <label class="switch">
+                    <input id="D1" type="checkbox" onclick="check_input(this)">
+                    <div class="slider"></div>
+                </label>
+                &emsp13;
+                <label class="switch">
+                    <input id="D2" type="checkbox" onclick="check_input(this)">
+                    <div class="slider"></div>
+                </label>
+                &emsp13;
+                <label class="switch">
+                    <input id="D3" type="checkbox" onclick="check_input(this)">
+                    <div class="slider"></div>
+                </label>
+                &emsp13;
+                <label class="switch">
+                    <input id="D4" type="checkbox" onclick="check_input(this)">
+                    <div class="slider"></div>
+                </label>
+            </div>
+
+            <br>
+            <br>
+            <!-- <div id="node1" class="nodes">
+                <label class="switch" style="margin:5px; padding: 5px;">
+                    <h5 style="font-weight: lighter;font-size: 22px;">Node 1</h5>
+                </label>
+                &emsp13;
+                <label class="switch">
+                    <input id="D0" type="checkbox" onclick="check_input(this)">
+                    <div class="slider"></div>
+                </label>
+                &emsp13;
+                <label class="switch">
+                    <input id="D1" type="checkbox" onclick="check_input(this)">
+                    <div class="slider"></div>
+                </label>
+                &emsp13;
+                <label class="switch">
+                    <input id="D2" type="checkbox" onclick="check_input(this)">
+                    <div class="slider"></div>
+                </label>
+                &emsp13;
+                <label class="switch">
+                    <input id="D3" type="checkbox" onclick="check_input(this)">
+                    <div class="slider"></div>
+                </label>
+                &emsp13;
+                <label class="switch">
+                    <input id="D4" type="checkbox" onclick="check_input(this)">
+                    <div class="slider"></div>
+                </label>
+            </div> -->
+        </div>
+
+        <div class="col-sm-6">
+            <div class="cam">
+                <button id="cam1" class="button button5" onclick=setcam(this)>CAM 1</button>
+                <button id="cam2" class="button button5" onclick=setcam(this)>CAM 2</button>
+                <button id="cam3" class="button button5" onclick=setcam(this)>CAM 3</button>
+                <br><img id="live_feed" src="" alt="" width="100%">
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
